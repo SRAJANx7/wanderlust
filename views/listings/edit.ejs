@@ -1,0 +1,65 @@
+<% layout("/layouts/boilerplate.ejs")%>
+<div class="row">
+  <div class="offset-2 col-8">
+  <h1>Edit Listing</h1>
+  <form method="POST"  novalidate class="needs-validation" action="/listings/<%=listing.id%>?_method=PUT">
+
+
+    <div>
+      <label  for="title" class="form-label">Title</label>
+    <input  required value="<%=listing.title%>"class="form-control" type="text" placeholder="enter title" name="title">
+    <div class="invalid-feedback">enter a title!</div>
+    <div class="valid-feedback">ok!</div>
+    </div>
+    
+    <br>
+
+    <div>
+      <label for="description" class="form-label">Description</label>
+    <textarea required  class="form-control" placeholder="enter description" name="description"><%=listing.description%></textarea> 
+    <div class="invalid-feedback">enter description!</div>
+    <div class="valid-feedback">ok!</div>
+    </div>
+    
+    <br>
+
+    <div>
+      <label for="price" class="form-label">Price</label>
+      <input  required   value="<%=listing.price%>" class="form-control"type="number" placeholder="enter price" name="price">
+      <div class="invalid-feedback">enter valid price!</div>
+      <div class="valid-feedback">ok!</div>
+    </div>
+   
+    <br>
+
+    <div>
+      <label for="image" class="form-label">Image</label>
+      <input required   value="<%=listing.image%>" class="form-control"  type="text" placeholder="enter image link" name="image">
+      <div class="invalid-feedback">enter image link!</div>
+      <div class="valid-feedback">ok!</div>
+    </div>
+    
+    <br>
+
+    <div>
+      <label for="location" class="form-label">Location</label>
+      <input required   value="<%=listing.location%>" class="form-control" type="text" placeholder="enter location" name="location">
+      <div class="invalid-feedback">enter location!</div>
+      <div class="valid-feedback">ok!</div>
+    </div>
+   
+    <br> 
+
+    <div>
+      <label for="country" class="form-label">Country</label>
+      <input required value="<%=listing.country%>"class="form-control" type="text" placeholder="enter country" name="country">
+      <div class="invalid-feedback">enter country!</div>
+      <div class="valid-feedback">ok!</div>
+    </div>
+    <br><br>
+    <button class="btn btn-dark">Edit</button>
+    <br>
+    <br>
+  </form>
+ </div>
+ </div>
